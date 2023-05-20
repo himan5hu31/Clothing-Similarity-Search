@@ -1,0 +1,5 @@
+Flask==2.3.2
+numpy==1.24.3
+sentence-transformers==2.2.2
+pinecone-client==2.2.1
+pandas==2.0.1

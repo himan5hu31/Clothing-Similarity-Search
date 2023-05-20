@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Never out of style| Himanshu Barskar</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="design">
+            <div class="pill-1 rotate-45"></div>
+            <div class="pill-2 rotate-45"></div>
+            <div class="pill-3 rotate-45"></div>
+            <div class="pill-4 rotate-45"></div>
+        </div>
+        <!-- <div class="login" method="post" action="/predict">
+            <h3 class="title">Input Text  </h3>
+            <div class="text-input">
+                <i class="ri-user-fill"></i>
+                <input type="text" placeholder="Example" name="text">
+            </div>
+            <button class="login-btn">Go</button>
+        </div> -->
+        <div class="login" >
+                <form method="post" action="/predict">
+                <!-- <label for="fname">Text Input:</label>
+                <input type="text" id="fname" name="fname" size="50"><br><br> -->
+                <h1>Never out of style</h1>
+                <input type="text" name="cgpa" size="50" placeholder="Example : western denim black jeans color"><br><br>
+                <input type="submit" value="Predict"><br><br>
+            </form>
+        </div>
+
+
+        <!-- {% if result %}
+            <p>{{ result }}</p>
+        {% endif %} -->
+
+        <div class="box">
+            <table>
+                <thead>
+                    <tr class="table_header">
+                        <th>Product Name</th>
+                        <th>Product Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                        <tr class="table_cell">
+                            <td class="table_cell">{{ item.0 }}</td>
+                            <td class="table_cell"><a href="{{ item.1 }}">Product link</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+
+    </div>
+</body>
+
+</html>
