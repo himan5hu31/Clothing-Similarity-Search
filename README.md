@@ -20,7 +20,6 @@ The project repository includes the following files:
 - `Dockerfile`: Configuration file for building a Docker image of the project.
 - `README.md`: This file, providing an overview and instructions for the project.
 - `main.py`: Python script containing the implementation of the clothing similarity search function.
-- `nn.h5`: Serialized machine learning model for similarity calculation.
 - `requirements.txt`: List of Python dependencies required for running the project.
 
 ## Getting Started
@@ -32,10 +31,60 @@ To use the Clothing Similarity Search project, follow these steps:
 3. Provide a text description of a clothing item as input.
 4. Retrieve the JSON response containing the ranked list of similar clothing items' links.
 
+## Directory structure
+
+The directory structure for the Clothing Similarity Search project is as follows:
+
+```
+Clothing-Similarity-Search/
+├── GCP/
+│   ├── static/
+│   │   └── css/
+│   │       └── style.css
+│   └── templates/
+│       └── index.html
+├── Dockerfile
+├── .dockerignore
+├── main.py
+├── requirements.txt
+├── webscraping/
+│   ├── data/
+│   └── scripts/
+│       ├── amazon_data.py
+│       └── flipkart_data.py
+└── README.md
+```
+
+- `GCP/`: Directory for the web application deployed on Google Cloud Platform (GCP).
+  - `static/`: Directory for static files used by the web application.
+    - `css/`: Directory for CSS files.
+      - `style.css`: CSS file for styling the web application.
+  - `templates/`: Directory for HTML templates used by the web application.
+    - `index.html`: HTML template for the main page of the web application.
+
+- `Dockerfile`: Configuration file for building a Docker image of the project.
+
+- `.dockerignore`: Specifies files and directories to be excluded when building Docker images.
+
+- `main.py`: Python script containing the implementation of the clothing similarity search function and web application.
+
+- `requirements.txt`: List of Python dependencies required for running the project.
+
+- `webscraping/`: Directory for web scraping-related scripts and data.
+  - `data/`: Directory for storing data obtained from web scraping.
+  - `scripts/`: Directory for web scraping scripts.
+    - `amazon_data.py`: Python script for scraping clothing item data from Amazon.
+    - `flipkart_data.py`: Python script for scraping clothing item data from Flipkart.
+
+- `README.md`: README file providing an overview and instructions for the project.
+
+This updated directory structure reflects the addition of directories specific to web application development and web scraping tasks. The web application files are organized under the `GCP/` directory, and the web scraping scripts and data are stored under the `webscraping/` directory.
+
+
 ## Deployment
 
 The project is deployed on Google Cloud. You can access the clothing similarity search function as a web service by deploying it on Google Cloud Functions or Google Cloud Run. Once deployed, you can send HTTP requests to the function and receive JSON responses with ranked suggestions.
-#### 1. Write App (Flask, TensorFlow)
+#### 1. Write App (Flask)
 - The code to build, train, and save the model is in the `test` folder.
 - Implement the app in `main.py`
 #### 2. Setup Google Cloud 
@@ -63,9 +112,5 @@ The Clothing Similarity Search project is open-source and available under the [M
 
 ## Contact
 
-If you have any questions or inquiries regarding the project, please contact the project maintainers:
-
-- Name: [Your Name]
-- Email: [Your Email]
-
+If you have any questions or inquiries regarding the project, please contact :
 We appreciate your interest and hope that Clothing Similarity Search proves to be a valuable tool for finding similar clothing items based on text descriptions.
