@@ -15,7 +15,7 @@ Clothing Similarity Search is a machine learning project that focuses on providi
 ### Example
 ```
 import requests
-response= requests.post("https://rankpedict-nxlb6twtva-as.a.run.app",
+response= requests.post("https://rankpedict-********-**.a.run.app",
                     json={"text": "western denim black jeans color "})
                     
 print(response.json())
