@@ -1,4 +1,5 @@
 # Clothing Similarity Search
+![image](https://github.com/himan5hu31/Clothing-Similarity-Search/assets/130960032/9ad79965-9179-4999-8943-cb46dcead056)
 
 ## Overview
 
