@@ -12,6 +12,18 @@ Clothing Similarity Search is a machine learning project that focuses on providi
 4. **Ranking**: Based on the calculated similarity scores, the model ranks the clothing items from most similar to least similar.
 5. **Results**: The model returns a JSON response containing a ranked list of links to similar clothing items on different websites.
 
+### Example
+```
+import requests
+response= requests.post("https://rankpedict-nxlb6twtva-as.a.run.app",
+                    json={"text": "western denim black jeans color "})
+                    
+print(response.json())
+
+{'product_link': 'https://www.amazon.com/Cinch-White-Relaxed-Mid-Rise-Stonewash/dp/B07F5LHFKY/ref=sr_1_2200?crid=1DVUGE5NG5UUO&keywords=men+fashion&qid=1684499787&rnid=7141123011&s=apparel&sprefix=menfashion%2Caps%2C282&sr=1-2200', 'productname': 'cinch western denim jeans mens white label low dark wash mb'}, 
+{'product_link': 'https://www.flipkart.com/crishtaliyo-regular-men-black-jeans/p/itmbe5b4e877bc50?pid=JEAGZS88EFQYXKJ9&lid=LSTJEAGZS88EFQYXKJ9B7OOIP&marketplace=FLIPKART&store=clo&srno=b_20_779&otracker=browse&fm=organic&iid=d54f2af1-65b8-48dd-9240-354ef9fd2067.JEAGZS88EFQYXKJ9.SEARCH&ppt=None&ppn=None&ssid=o98bgb7ojk0000001684497563652', 'productname': 'men regular high rise black jeans'},
+{'product_link': 'https://www.flipkart.com/highlander-tapered-fit-men-black-jeans/p/itm6706765bca917?pid=JEAGA5JKH3BBGQFH&lid=LSTJEAGA5JKH3BBGQFHIDTBNS&marketplace=FLIPKART&store=clo%2Fvua&srno=b_8_309&otracker=browse&fm=organic&iid=61d2aecd-bf8b-4d37-aa0a-957adc3f0ed1.JEAGA5JKH3BBGQFH.SEARCH&ppt=None&ppn=None&ssid=hrs7lxbdrk0000001684505882013', 'productname': 'men tapered fit low rise black jeans'},
+```
 ## Project Structure
 
 The project repository includes the following files:
