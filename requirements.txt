@@ -1,0 +1,6 @@
+Flask
+gunicorn
+pandas
+sentence-transformers
+pinecone-client
+requests
