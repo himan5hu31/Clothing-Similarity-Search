@@ -68,6 +68,7 @@ Clothing-Similarity-Search/
 │   └── scripts/
 │       ├── amazon_data.py
 │       └── flipkart_data.py
+│       └── vectordata.py
 └── README.md
 ```
 
