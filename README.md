@@ -7,12 +7,15 @@ Clothing Similarity Search is a machine learning project that focuses on providi
 
 ## How It Works
 
-1. **Input**: The user provides a text description of a clothing item.
-2. **Model Processing**: The machine learning model processes the input text and extracts relevant features that capture the clothing item's characteristics.
-3. **Similarity Calculation**: The model computes the similarity between the input text and the text descriptions of clothing items in its database.
-4. **Ranking**: Based on the calculated similarity scores, the model ranks the clothing items from most similar to least similar.
-5. **Results**: The model returns a JSON response containing a ranked list of links to similar clothing items on different websites.
+The Clothing Similarity Search project operates as follows:
 
+1. **Input**: The user provides a text description of a clothing item.
+2. **Model Processing**: The input text undergoes preprocessing steps to remove punctuation and other irrelevant elements using regular expressions (regex). The processed text is then transformed into a vector representation using sentence transformers, which captures the clothing item's characteristics and saved into Pinecode Vector Databse.
+3. **Similarity Calculation**: The machine learning model compares the vector representation of the input text with the vector representations of clothing item descriptions in its database. It computes the similarity scores between the input text and each item in the database.
+4. **Ranking**: Based on the calculated similarity scores, the model ranks the clothing items from most similar to least similar. The items with higher similarity scores are considered more similar to the input text.
+5. **Results**: The model generates a JSON response containing a ranked list of links to similar clothing items from different websites. The response includes the URLs of the top 5 most similar products, allowing users to easily access and explore those items online.
+
+By following this process, the Clothing Similarity Search project enables users to input a text description of a clothing item and receive a concise and informative list of links to similar products. This helps users find clothing items that closely match their preferences and discover new options for their desired style.
 ### Example
 ```
 import requests
